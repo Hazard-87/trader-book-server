@@ -10,6 +10,7 @@ jobs:
     steps:
       -uses: actions/checkout@master
       -name: Publish to registry
+        run: docker build . --file Dockerfile --tag trader-book-server:$(date +%s)
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           registry: docker.pkg.github.com

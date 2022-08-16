@@ -5,6 +5,6 @@ services:
     container_name: trader-book-server
     restart: always
     ports:
-      - 3000:3000
+      - "3000:3000"
     volumes:
       - ./.env:/opt/app/.env
